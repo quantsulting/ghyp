@@ -1,0 +1,25 @@
+
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+## Overview
+
+ghyp is a package on the Generalized Hyperbolic Distribution and Its Special Cases
+
+## Installation
+
+```{r, eval = FALSE}
+# The easiest way to get ghyp is to install it via the development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("quantsulting/ghyp")
+```
