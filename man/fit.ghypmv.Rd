@@ -16,29 +16,29 @@
 }
 \usage{
 fit.ghypmv(data, lambda = 1, alpha.bar = 1, mu = NULL, sigma = NULL,
-           gamma = NULL, opt.pars = c(lambda = T, alpha.bar = T, mu = T,
-                                      sigma = T, gamma = !symmetric),
-           symmetric = F, standardize = F, nit = 2000, reltol = 1e-8,
-           abstol = reltol * 10, na.rm = F, silent = FALSE, save.data = T,
+           gamma = NULL, opt.pars = c(lambda = TRUE, alpha.bar = TRUE, mu = TRUE,
+                                      sigma = TRUE, gamma = !symmetric),
+           symmetric = FALSE, standardize = FALSE, nit = 2000, reltol = 1e-8,
+           abstol = reltol * 10, na.rm = FALSE, silent = FALSE, save.data = TRUE,
            trace = TRUE, ...)
 
 fit.hypmv(data,
-          opt.pars = c(alpha.bar = T, mu = T, sigma = T, gamma = !symmetric),
-          symmetric = F, ...)
+          opt.pars = c(alpha.bar = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+          symmetric = FALSE, ...)
 
 fit.NIGmv(data,
-          opt.pars = c(alpha.bar = T, mu = T, sigma = T, gamma = !symmetric),
-          symmetric = F, ...)
+          opt.pars = c(alpha.bar = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+          symmetric = FALSE, ...)
 
 fit.VGmv(data, lambda = 1,
-         opt.pars = c(lambda = T, mu = T, sigma = T, gamma = !symmetric),
-         symmetric = F, ...)
+         opt.pars = c(lambda = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+         symmetric = FALSE, ...)
 
 fit.tmv(data, nu = 3.5,
-        opt.pars = c(lambda = T, mu = T, sigma = T, gamma = !symmetric),
-        symmetric = F, ...)
+        opt.pars = c(lambda = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+        symmetric = FALSE, ...)
 
-fit.gaussmv(data, na.rm = T, save.data = T)
+fit.gaussmv(data, na.rm = TRUE, save.data = TRUE)
 }
 % <---------------------------------------------------------------------->
 \arguments{

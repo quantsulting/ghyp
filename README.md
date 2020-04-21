@@ -4,8 +4,7 @@
 ## Overview
 
 ghyp is a package on the Generalized Hyperbolic Distribution and Its
-Special
-Cases
+Special Cases
 
 ## Installation
 

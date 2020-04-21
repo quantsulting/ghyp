@@ -765,7 +765,7 @@ distribution only.
 
   title(main =  "Density and log-Density of the generalized hyperbolic distribution",
         sub=expression(paste("Y-Axis: ", lambda,"; X-Axis: ",bar(alpha),sep="")),
-        outer = T,cex.sub=1.2)
+        outer = TRUE, cex.sub=1.2)
 @
 \caption{The shape of the univariate generalized hyperbolic density drawn
          with different shape parameters $(\lambda,\abar)$. The location and
@@ -1333,7 +1333,7 @@ inheriting from the class \verb=ghyp=.
   dghyp(10:14,univariate.ghyp.object)
 
   ## Passing a fitted distribution object to the quantile function
-  fitted.ghyp.object <- fit.tuv(smi.stocks[,"Novartis"], silent = T)
+  fitted.ghyp.object <- fit.tuv(smi.stocks[,"Novartis"], silent = TRUE)
   qghyp(c(0.01,0.05),fitted.ghyp.object)
 
   ## Generic method dispatching: the histogram method

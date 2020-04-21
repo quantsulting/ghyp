@@ -17,28 +17,28 @@
 \usage{
 fit.ghypuv(data, lambda = 1, alpha.bar = 0.5, mu = median(data),
            sigma = mad(data), gamma = 0,
-           opt.pars = c(lambda = T, alpha.bar = T, mu = T,
-                        sigma = T, gamma = !symmetric),
-           symmetric = F, standardize = F, save.data = T,
-           na.rm = T, silent = FALSE, ...)
+           opt.pars = c(lambda = TRUE, alpha.bar = TRUE, mu = TRUE,
+                        sigma = TRUE, gamma = !symmetric),
+           symmetric = FALSE, standardize = FALSE, save.data = TRUE,
+           na.rm = TRUE, silent = FALSE, ...)
 
 fit.hypuv(data,
-          opt.pars = c(alpha.bar = T, mu = T, sigma = T, gamma = !symmetric),
-          symmetric = F, ...)
+          opt.pars = c(alpha.bar = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+          symmetric = FALSE, ...)
 
 fit.NIGuv(data,
-          opt.pars = c(alpha.bar = T, mu = T, sigma = T, gamma = !symmetric),
-          symmetric = F, ...)
+          opt.pars = c(alpha.bar = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+          symmetric = FALSE, ...)
 
 fit.VGuv(data, lambda = 1,
-         opt.pars = c(lambda = T, mu = T, sigma = T, gamma = !symmetric),
-         symmetric = F, ...)
+         opt.pars = c(lambda = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+         symmetric = FALSE, ...)
 
 fit.tuv(data, nu = 3.5,
-        opt.pars = c(nu = T, mu = T, sigma = T, gamma = !symmetric),
-        symmetric = F, ...)
+        opt.pars = c(nu = TRUE, mu = TRUE, sigma = TRUE, gamma = !symmetric),
+        symmetric = FALSE, ...)
 
-fit.gaussuv(data, na.rm = T, save.data = T)
+fit.gaussuv(data, na.rm = TRUE, save.data = TRUE)
 }
 % <---------------------------------------------------------------------->
 \arguments{
