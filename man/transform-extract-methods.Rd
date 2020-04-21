@@ -28,7 +28,6 @@ generalized hyperbolic distribution object.
   \item{multiplier}{A \code{vector} or a \code{matrix}.}
   \item{x}{A multivariate generalized hyperbolic distribution inheriting from class \code{\link[=ghyp-class]{ghyp}}.}
   \item{i}{Index specifying which dimensions to extract.}
-  \item{\dots}{Arguments passed to \code{transform}.}
 }
 % <---------------------------------------------------------------------->
 \value{

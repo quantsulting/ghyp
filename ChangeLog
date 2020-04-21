@@ -310,7 +310,7 @@ ghyp V1.5.8
   * Class "try-error" checks fixed
   * Dependence on gplots removed (MASS is used now).
 
-2020-01-19 Marc Weibel
-ghyp V1.5.9
+2020-04-21 Marc Weibel
+ghyp V1.6.0
   * Change of maintainer to Marc Weibel
-  * Features will be added in version 1.6.0.
+  * Features added: ES attribution
