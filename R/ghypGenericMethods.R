@@ -697,8 +697,11 @@ setMethod("summary", signature(object = "mle.ghyp"), summary.mle.ghyp)
         }
     }
 
-    if(any(diag(multiplier) == 0)){
-        stop("Diagonal elements of multiplier must not be '0'!")
+    # if(any(diag(multiplier) == 0)){
+    #     stop("Diagonal elements of multiplier must not be '0'!")
+    # }
+    if(sum(diag(multiplier)) == 0){
+        stop("Diagonal elements of multiplier cannot sum up to 0!")
     }
 
     sigma <- multiplier %*% object@sigma %*% t(multiplier)
@@ -769,3 +772,107 @@ setMethod("transform", signature(`_data` = "ghyp"), transform.ghyp)
 ### <---------------------------------------------------------------------->
 setMethod("vcov", signature(object = "ghyp"), vcov.ghyp)
 ### <---------------------------------------------------------------------->
+
+
+### <======================================================================>
+"contribution.attrib" <- function(object, percentage=FALSE)
+{   
+    if(percentage==FALSE)
+    {
+        # Contribution 
+        cat("contribution: \n")
+        print(round(object@contribution, 3))
+    } else {
+        # Contribution in percent
+        cat("contribution in %: \n")
+        contrib.pct <- t(t(object@contribution)/colSums(object@contribution))
+        print(round(contrib.pct*100,2))
+    }
+}
+### <---------------------------------------------------------------------->
+#' Risk Contribution Method.
+#' 
+#' 
+#' @name contribution
+#' @rdname ghyp.attribution-class
+#' @param object an object inheriting from class \code{\link[=ghyp.attribution-class]{ghyp.attribution}}.
+#' @param \dots additional parameters.
+#' @docType methods
+#' @exportMethod contribution
+setGeneric("contribution", function(object, ...){standardGeneric("contribution")})
+
+#' Risk Contribution Method
+#' 
+#'  The function \code{contribution} returns the contribution of the assets to the portfolio expected shortfall.
+#'  
+#' @param object an object inheriting from class \code{\link[=ghyp.attribution-class]{ghyp.attribution}}.
+#' @param percentage boolean. Display figures in percent. (Default=FALSE).
+#' 
+#' @details Expected shortfall enjoys homogeneity, sub-additivity, and co-monotonic additivity. Its associated function is continuously differentiable under
+#' moderate assumptions on the joint distribution of the assets.
+#' 
+#' @return contribution of each asset to portfolio's overall expected shortfall.
+#' 
+#' @author Marc Weibel
+#' 
+#' @seealso \code{\link{ESghyp.attribution}}, \code{\link{ghyp.attribution-class}} to
+#' compute the expected shortfall attribution.
+#' 
+#' @keywords risk attribution
+#' 
+#' @rdname ghyp.attribution-class
+#' @aliases contribution,ghyp.attribution-method
+setMethod("contribution", signature(object = "ghyp.attribution"), contribution.attrib)
+### <---------------------------------------------------------------------->
+
+
+### <======================================================================>
+"sensitivity.attrib" <- function(object)
+{    
+    # Sensitivity
+    cat("sensitivity: \n")	
+    print(round(object@sensitivity, 3))
+}
+### <---------------------------------------------------------------------->
+#' Risk Sensitivity Method.
+#' 
+#' @name sensitivity
+#' @rdname ghyp.attribution-class
+#' @param object an object inheriting from class \code{\link[=ghyp.attribution-class]{ghyp.attribution}}.
+#' @docType methods
+#' @exportMethod sensitivity
+setGeneric("sensitivity", function(object){standardGeneric("sensitivity")})
+
+#' ES Sensitivity Method.
+#' @rdname ghyp.attribution-class
+#' @aliases sensitivity,ghyp.attribution-method
+#' 
+#' @param object an object inheriting from class \code{\link[=ghyp.attribution-class]{ghyp.attribution}}.
+#'  
+#' @return sensitivity of each asset to portfolio's overall expected shortfall.
+#' 
+#' 
+setMethod("sensitivity", signature(object = "ghyp.attribution"), sensitivity.attrib)
+### <---------------------------------------------------------------------->
+
+
+### <======================================================================>
+"weights.attrib" <- function(object)
+{    
+    cat("weights (%): \n")
+    print(round(object@weights*100, 2))	
+}
+### <---------------------------------------------------------------------->
+#' Extract Assets Weights within Portfolio
+#' @rdname ghyp.attribution-class
+#' @aliases weights,ghyp.attribution-method
+#' 
+#' @param object an object inheriting from class \code{\link[=ghyp.attribution-class]{ghyp.attribution}}.
+#' 
+#' @return weights of each asset within portfolio. 
+#' 
+#' 
+#' @export
+setMethod("weights", signature(object = "ghyp.attribution"), weights.attrib)
+### <---------------------------------------------------------------------->
+
