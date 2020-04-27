@@ -25,6 +25,7 @@
 #' @seealso \code{\link{ESghyp.attribution}}.
 #' @keywords attribution
 #' @examples 
+#'\dontrun{
 #'  data(smi.stocks)
 #'  
 #'  ## Fit a NIG model to Novartis, CS and Nestle log-returns
@@ -39,6 +40,7 @@
 #'  
 #'  ## Plot Risk Contribution for each Asset
 #'  plot(portfolio.attrib, metrics='contribution')  
+#'}
 #' @export
 "plot.ghyp.attrib" <- function(x, metrics=c('contribution', 'sensitivity'), 
                                column.index=NULL, percentage=FALSE, colorset=NULL,
