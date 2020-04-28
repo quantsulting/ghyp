@@ -45,6 +45,7 @@ plot.ghyp.attrib(
 These functions plot the contribution of each asset to the overall portfolio expected shortfall.
 }
 \examples{
+\dontrun{
  data(smi.stocks)
  
  ## Fit a NIG model to Novartis, CS and Nestle log-returns
@@ -59,6 +60,7 @@ These functions plot the contribution of each asset to the overall portfolio exp
  
  ## Plot Risk Contribution for each Asset
  plot(portfolio.attrib, metrics='contribution')  
+}
 }
 \seealso{
 \code{\link{ESghyp.attribution}}.

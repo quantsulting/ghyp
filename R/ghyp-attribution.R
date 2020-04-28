@@ -32,6 +32,7 @@
 #'   
 #'
 #' @examples
+#' \dontrun{
 #' data(smi.stocks)
 #' ## Fit a NIG model to Novartis, CS and Nestle log-returns
 #' assets.fit <- fit.NIGmv(smi.stocks[, c("Novartis", "CS", "Nestle")], silent = TRUE)
@@ -41,7 +42,7 @@
 #' es.levels <- c(0.01)
 #' 
 #' portfolio.attrib <- ESghyp.attribution(alpha=es.levels, object=assets.fit, weights=weights)
-#'
+#' }
 #' @keywords risk attribution
 #' @export
 "ESghyp.attribution" <- function(alpha, object = ghyp(), distr = c("return", "loss"), weights = NULL, ...)

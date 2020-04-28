@@ -86,6 +86,7 @@ setClass("mle.ghyp",
 #'the corresponding fixed parameters are not printed.
 #'
 #' @examples 
+#' \dontrun{
 #' data(smi.stocks)
 #' multivariate.fit <- fit.ghypmv(data = smi.stocks,
 #' opt.pars = c(lambda = FALSE, alpha.bar = FALSE),
@@ -93,7 +94,7 @@ setClass("mle.ghyp",
 #' 
 #' portfolio <- ESghyp.attribution(0.01, multivariate.fit)
 #' summary(portfolio)
-#' 
+#' }
 #' @keywords classes
 #' @name ghyp.attribution-class
 #' @rdname ghyp.attribution-class

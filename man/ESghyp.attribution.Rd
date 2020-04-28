@@ -43,6 +43,7 @@ level \eqn{\alpha}{alpha} as \eqn{\hbox{ES}_\alpha := \hbox{E}(X | X
 > F^{-1}_X(\alpha))}{ES_alpha := E(X | X > F^-1(alpha))}.\cr
 }
 \examples{
+\dontrun{
 data(smi.stocks)
 ## Fit a NIG model to Novartis, CS and Nestle log-returns
 assets.fit <- fit.NIGmv(smi.stocks[, c("Novartis", "CS", "Nestle")], silent = TRUE)
@@ -52,7 +53,7 @@ weights <- c(0.2, 0.5, 0.3)
 es.levels <- c(0.01)
 
 portfolio.attrib <- ESghyp.attribution(alpha=es.levels, object=assets.fit, weights=weights)
-
+}
 }
 \seealso{
 \code{\link{contribution,ghyp.attribution-method}}, \code{\link{sensitivity,ghyp.attribution-method}} and \code{\link[=weights]{weights}} for Expected Shortfall.

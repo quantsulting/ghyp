@@ -69,6 +69,7 @@ Objects should only be created by calls to the constructors \code{\link{ESghyp.a
 }
 
 \examples{
+\dontrun{
 data(smi.stocks)
 multivariate.fit <- fit.ghypmv(data = smi.stocks,
 opt.pars = c(lambda = FALSE, alpha.bar = FALSE),
@@ -76,7 +77,7 @@ lambda = 2)
 
 portfolio <- ESghyp.attribution(0.01, multivariate.fit)
 summary(portfolio)
-
+}
 }
 \seealso{
 \code{\link{ESghyp.attribution}}, \code{\link{ghyp.attribution-class}} to
