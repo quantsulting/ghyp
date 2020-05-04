@@ -11,5 +11,5 @@ Special Cases
 ``` r
 # The easiest way to get ghyp is to install it via the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("quantsulting/ghyp")
+devtools::install_github("quantsulting/ghyp", build_vignettes = TRUE)
 ```
