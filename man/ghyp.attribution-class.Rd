@@ -85,8 +85,6 @@ compute the expected shortfall attribution.
 }
 \author{
 Marc Weibel
-
-Marc Weibel
 }
 \keyword{attribution}
 \keyword{classes}
