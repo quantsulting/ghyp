@@ -319,3 +319,7 @@ ghyp V1.6.0
 ghyp V1.6.1
   * Fixed some bugs in the documentation
   * Features added: Plot ES attribution (contribution or sentitivity)
+
+2022-04-18 Marc Weibel
+ghyp V1.6.2
+  * Fixed some bugs due to deprecated definitions in C
