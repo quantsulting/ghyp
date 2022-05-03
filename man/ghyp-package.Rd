@@ -172,9 +172,9 @@ acknowledged.
 David Luethi, Wolfgang Breymann \cr
 
 Institute of Data Analyses and Process Design
-(\url{https://www.zhaw.ch/en/engineering/institutes-centres/institute-of-data-analysis-and-process-design-idp/}) \cr
+(\url{https://www.zhaw.ch/en/engineering/institutes-centres/idp/groups/data-analysis-and-statistics/}) \cr
 
-Maintainer: Damien Challet <damien.challet@gmail.com>
+Maintainer: Marc Weibel <marc.weibel@quantsulting.ch>
 }
 % <---------------------------------------------------------------------->
 \references{

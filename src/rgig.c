@@ -12,12 +12,23 @@
 #include "rgig.h"
 #include <math.h>
 #include <assert.h>
-#include <R.h>
+/* #include <R.h> */
 #include <Rmath.h>
-
+#include <R_ext/Random.h>
 #define ZTOL sqrt(DOUBLE_EPS)
 
-
+#ifndef STRICT_R_HEADERS
+#define PI             M_PI
+#include <float.h>  /* Defines the rest, at least in C99 */
+#define SINGLE_EPS     FLT_EPSILON
+#define SINGLE_BASE    FLT_RADIX
+#define SINGLE_XMIN    FLT_MIN
+#define SINGLE_XMAX    FLT_MAX
+#define DOUBLE_DIGITS  DBL_MANT_DIG
+#define DOUBLE_EPS     DBL_EPSILON
+#define DOUBLE_XMAX    DBL_MAX
+#define DOUBLE_XMIN    DBL_MIN
+#endif
 
 
 /* 

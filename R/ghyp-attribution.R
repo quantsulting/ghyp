@@ -185,7 +185,7 @@
           aux=NULL)$value, silent=TRUE)	
         }			
         
-        if(class(tmp.contrib) == "try-error"){
+        if(is(tmp.contrib, "try-error")){
           stop("Failed to determine contribution \n")
           ES.contrib[i, j] <- NA
         } else {
